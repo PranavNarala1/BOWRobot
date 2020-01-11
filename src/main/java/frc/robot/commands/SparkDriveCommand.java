@@ -1,22 +1,33 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
-import frc.robot.Robot;
+import edu.wpi.first.wpilibj2.command.Subsystem;
+import frc.robot.RobotContainer;
+import frc.robot.subsystems.LeftSpark;
+
+import java.util.Set;
 
 public class SparkDriveCommand extends CommandBase {
 
-    public SparkDriveCommand() {
-       addRequirements(Robot.leftSpark, Robot.rightSpark);
+    private LeftSpark leftSpark;
+    private final Set<Subsystem> subsystems;
+
+    public SparkDriveCommand(LeftSpark leftSpark) {
+        this.leftSpark = leftSpark;
+        this.subsystems = Set.of(leftSpark);
     }
 
     public void execute() {
-        Robot.leftSpark.drive(Robot.m_oi.leftJoystick.getY());
-        Robot.rightSpark.drive(Robot.m_oi.rightJoystick.getY());
+        leftSpark.drive(RobotContainer.leftJoystick.getY());
     }
 
     @Override
     public boolean isFinished() {
         return false;
+    }
 
+    @Override
+    public Set<Subsystem> getRequirements() {
+        return this.subsystems;
     }
 }

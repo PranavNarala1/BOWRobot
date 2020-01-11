@@ -24,10 +24,9 @@ public class RobotContainer
 {
     // The robot's subsystems and commands are defined here...
     private final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
-
+//    private SparkDriveCommand command = new SparkDriveCommand();
     private final ExampleCommand autonomousCommand = new ExampleCommand(exampleSubsystem);
-    public Joystick leftJoystick;
-    public Joystick rightJoystick;
+    public static Joystick leftJoystick;
 
 
     /**

@@ -11,7 +11,6 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import frc.robot.subsystems.LeftSpark;
-import frc.robot.subsystems.RightSpark;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -24,7 +23,6 @@ public class Robot extends TimedRobot
 {
     public static OI m_oi;
     public static LeftSpark leftSpark;
-    public static RightSpark rightSpark;
     private Command autonomousCommand;
 
     private RobotContainer robotContainer;
@@ -37,7 +35,6 @@ public class Robot extends TimedRobot
     public void robotInit()
     {
         leftSpark = new LeftSpark();
-        rightSpark = new RightSpark();
         // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
         // autonomous chooser on the dashboard.
         robotContainer = new RobotContainer();
