@@ -21,7 +21,6 @@ import frc.robot.subsystems.DriveTrainSubsystem;
  */
 public class Robot extends TimedRobot
 {
-    public static OI m_oi;
     public static DriveTrainSubsystem driveTrainSubsystem;
     private Command autonomousCommand;
 
@@ -38,7 +37,7 @@ public class Robot extends TimedRobot
         // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
         // autonomous chooser on the dashboard.
         robotContainer = new RobotContainer();
-        m_oi = new OI();
+        robotContainer = new RobotContainer();
     }
 
     /**

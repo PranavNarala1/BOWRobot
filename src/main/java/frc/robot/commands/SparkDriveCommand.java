@@ -18,7 +18,7 @@ public class SparkDriveCommand extends CommandBase {
     }
 
     public void execute() {
-        driveTrainSubsystem.drive(RobotContainer.leftJoystick.getY());
+        driveTrainSubsystem.drive(RobotContainer.joystick.getY());
     }
 
     @Override

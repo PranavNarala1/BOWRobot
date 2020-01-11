@@ -26,7 +26,7 @@ public class RobotContainer
     private final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 //    private SparkDriveCommand command = new SparkDriveCommand();
     private final ExampleCommand autonomousCommand = new ExampleCommand(exampleSubsystem);
-    public static Joystick leftJoystick;
+    public static Joystick joystick;
 
 
     /**
@@ -34,7 +34,7 @@ public class RobotContainer
      */
     public RobotContainer()
     {
-        leftJoystick = new Joystick(RobotMap.LEFT_JOYSTICK);
+        joystick = new Joystick(RobotMap.LEFT_JOYSTICK);
         // Configure the button bindings
         configureButtonBindings();
     }
