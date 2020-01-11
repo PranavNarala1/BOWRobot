@@ -3,22 +3,22 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import edu.wpi.first.wpilibj2.command.Subsystem;
 import frc.robot.RobotContainer;
-import frc.robot.subsystems.LeftSpark;
+import frc.robot.subsystems.DriveTrainSubsystem;
 
 import java.util.Set;
 
 public class SparkDriveCommand extends CommandBase {
 
-    private LeftSpark leftSpark;
+    private DriveTrainSubsystem driveTrainSubsystem;
     private final Set<Subsystem> subsystems;
 
-    public SparkDriveCommand(LeftSpark leftSpark) {
-        this.leftSpark = leftSpark;
-        this.subsystems = Set.of(leftSpark);
+    public SparkDriveCommand(DriveTrainSubsystem driveTrainSubsystem) {
+        this.driveTrainSubsystem = driveTrainSubsystem;
+        this.subsystems = Set.of(driveTrainSubsystem);
     }
 
     public void execute() {
-        leftSpark.drive(RobotContainer.leftJoystick.getY());
+        driveTrainSubsystem.drive(RobotContainer.leftJoystick.getY());
     }
 
     @Override

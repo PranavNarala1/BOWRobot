@@ -5,7 +5,7 @@ import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.commands.SparkDriveCommand;
 
-public class LeftSpark extends SubsystemBase {
+public class DriveTrainSubsystem extends SubsystemBase {
     private final Spark leftSpark1;
     private final Spark leftSpark2;
     private final Spark rightSpark1;
@@ -20,7 +20,7 @@ public class LeftSpark extends SubsystemBase {
         rightSpark2.setSpeed(leftspeed);
     }
 
-    public LeftSpark() {
+    public DriveTrainSubsystem() {
         leftSpark1 = new Spark(0);
         leftSpark2 = new Spark(1);
         rightSpark1 = new Spark(2);

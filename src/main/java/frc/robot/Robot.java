@@ -10,7 +10,7 @@ package frc.robot;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
-import frc.robot.subsystems.LeftSpark;
+import frc.robot.subsystems.DriveTrainSubsystem;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -22,7 +22,7 @@ import frc.robot.subsystems.LeftSpark;
 public class Robot extends TimedRobot
 {
     public static OI m_oi;
-    public static LeftSpark leftSpark;
+    public static DriveTrainSubsystem driveTrainSubsystem;
     private Command autonomousCommand;
 
     private RobotContainer robotContainer;
@@ -34,7 +34,7 @@ public class Robot extends TimedRobot
     @Override
     public void robotInit()
     {
-        leftSpark = new LeftSpark();
+        driveTrainSubsystem = new DriveTrainSubsystem();
         // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
         // autonomous chooser on the dashboard.
         robotContainer = new RobotContainer();
